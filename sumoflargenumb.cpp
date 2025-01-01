@@ -7,7 +7,7 @@ string addlargenumbers( string num1, string num2)
 	
  int len1 = num1.length();
  int len2 = num2.length();
- if (len1<len2);
+ if (len1<len2)
  {
  
  	string temp = num1;
@@ -16,12 +16,13 @@ string addlargenumbers( string num1, string num2)
  }
  while(len2 < len1)
  {
- num2= '0'+ num2;
+ 	num2= '0'+ num2;
+	len2 = len2 + 1;
  }
  string result = " ";
  int carry = 0;
-int i =len1 - 1;int j = len2 - 1;
-int digit1, digit2;	
+ int i =len1 - 1;int j = len2 - 1;
+ int digit1, digit2;	
  while (i >= 0 or j>=0 or carry)
  {
  digit1 = (i >=0 ) ? num1[i] - '0' : 0;
@@ -45,7 +46,7 @@ return result;
   cin>>num1;
   cout<<"Enter the second number:";
   cin>>num2;
-   string result = addlargenumbers(num1, num2);
-   cout<<"the sum of the your entry two large number is ="<< result <<endl;
- return 0;
+  string result = addlargenumbers(num1, num2);
+  cout<<"the sum of the your entry two large number is ="<< result <<endl;
+  return 0;
 }
